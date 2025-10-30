@@ -178,8 +178,8 @@ font-size: .7em;
   font-family: "scoreboard";
   margin: var(--space-1);
   background-color: #272727;
-  border: white solid;
-  padding: 2em;
+  padding: 1em;
+  justify-content: space-around;
 }
 
 
@@ -190,12 +190,22 @@ font-size: .7em;
 
 
 
-.number-slot {
+.score-container {
   background-color: #141414;
-  padding: .3em;
-  margin-left: 1em;
-  margin-right: 1em;
 }
+
+.score-container p {
+  font-size: 100%;
+  color: var(--c-orange);
+}
+
+
+.essai-container {
+  background-color: red;
+}
+
+
+
 
 
 
