@@ -136,7 +136,7 @@ font-size: .7em;
   align-items: center;
 }
 
-.icon-title {
+.icon {
   color: white;
 }
 
@@ -216,4 +216,5 @@ font-size: .7em;
 
 .scoreboard-data > .hard-text {
   color: blueviolet;
+
 }
