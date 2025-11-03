@@ -120,8 +120,8 @@ updateDisplay();
 // ------------------ ADAFRUIT IO CONNECTION ------------------
 
 // Replace with your Adafruit IO credentials
-const USERNAME = "picoletsan";
-const AIO_KEY = "aio_pcwt18izgfAGzz8XZsGS97qfLmkM";
+const USERNAME = "name";
+const AIO_KEY = "key";
 
 // Initialize the connection
 const io = new AdafruitIO(USERNAME, AIO_KEY);
