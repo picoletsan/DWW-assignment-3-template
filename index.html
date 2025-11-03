@@ -71,9 +71,12 @@
             </div>
 
             <div class="descriptionContainer section-margin">
-                <div class="flex justify-between"><h3>Description</h3><i data-lucide="pencil" class="icon icon-title" height="1em"></i></div>
+                <div class="flex justify-between">
+                    <h3>Description</h3>
+                    <i data-lucide="pencil" id="edit-description" class="icon icon-title" height="1em"></i>
+                </div>
 
-                <p>
+                <p id="description-text">
                     Random descripton of a really cool basketball court I played on during my stay 
                     in hong kong where I got ot play with a lot of cool locals who 
                     were very happy to see me play on the court. 
@@ -85,8 +88,8 @@
                 </p>
 
             </div>
-
-            <div class="mediaContainer h3-spacing section-margin-top-bottom">
+<div id="reorderable-sections">
+            <div class="mediaContainer h3-spacing section-margin-top-bottom reorderable">
                 <div class="flex justify-between">
                     <h3>Media</h3>
                     <i data-lucide="image" class="icon icon-spacing icon-title" height="1em"></i>
@@ -100,7 +103,7 @@
                 </div>
             </div>
 
-            <div class="stats-container h3-spacing section-margin-top-bottom">
+            <div class="stats-container h3-spacing section-margin-top-bottom reorderable">
                 <div class="flex justify-between">
                     <h3>Stats</h3>
                     <i data-lucide="pyramid" class="icon icon-spacing icon-title" height="1em"></i>
@@ -115,7 +118,7 @@
             </div>
 
 
-            <div class="playlist-container h3-spacing section-margin-top-bottom">
+            <div class="playlist-container h3-spacing section-margin-top-bottom reorderable">
                 <div class="flex justify-between">
                     <h3>Playlist</h3>
                     <i data-lucide="disc-2" class="icon icon-spacing icon-title" height="1em"></i>
@@ -127,30 +130,94 @@
             </div>
 
 
-        <div class="stats-container-filled h3-spacing section-margin-top-bottom">
+        <div class="stats-container-filled h3-spacing section-margin-top-bottom reorderable">
                 <div class="flex justify-between">
                     <h3>Stats</h3>
                     <i data-lucide="pyramid" class="icon icon-spacing icon-title" height="1em"></i>
                 </div>
+
+
+
+
                 <!-- blue box -->
                 <div class="stats-box">
                     <!-- set of numbers in a row-->
-
-                   <div class="score-container flex flex-column justify-center align-center">
-                        <p class="hard-text">Score</p>
-                        <p class="stat-text">15</p>
-                   </div>
-                <div class="essai-container">
+                   <div class="border-container flex align-center align-center justify-center">
                     <div class="score-container flex flex-column justify-center align-center">
-                        <p class="hard-text">Shot</p>
-                        <p class="stat-text">25</p>
-                   </div>
-                </div>
+                                <p class="hard-text">Score</p>
+                            <div class="variable-color">
+                                <p class="stats-text" id="scored">0</p>
+                            </div>
+                    </div>
+                    </div>
+                   <div class="border-container flex justify-center align-center">     
+                        <div class="score-container flex flex-column justify-center align-center">
+                            <p class="hard-text">Shot</p>
+                        <div class="variable-color">
+                            <p class="stats-text" id="shots">0</p>
+                        </div>
+                        </div>
+                    </div>
             </div>
         </div>
 
-    
-    
+
+        
+
+
+        <div class="timer-container-filled h3-spacing section-margin-top-bottom reorderable">
+                <div class="flex justify-between">
+                    <h3>Timer/Stopwatch</h3>
+                    <i data-lucide="timer" class="icon icon-spacing icon-title" height="1em"></i>
+                </div>
+
+
+
+
+                <!-- blue box -->
+                <div class="timer-box flex justify-around">
+                    <div class="flex flex-column justify-center first-buttons-box">
+                        <!-- stopwatch button-->
+                        <div class="stopwatch-button-box">
+                            <!-- reset button-->
+                             <button class="first-buttons stopwatch-button">Stopwatch</button>
+                        </div>
+                        <div class="reset-button-box">
+                            <!-- reset button-->
+                             <button class="first-buttons reset-button">Reset</button>
+                        </div>
+                        <div class="stop-button-box">
+                            <!-- stop-->
+                            <button class="first-buttons stop-button">Stop</button>
+                        </div>
+                        <!--reset and stop button in column-->
+                    </div>
+                    <div class="flex align-center start-button-box">
+                        <!-- start cube button-->
+                         <button class="start-button">Start</button>
+                    </div>
+                    <div class="timer-bar">
+                        <!-- timer-->
+                         <p>05:59:54</p>
+                    </div>
+
+
+                </div>
+        </div>
+
+   </div> 
+
+    <div class="footer-container section-margin-top-bottom flex flex-column justify-center">
+        <hr>
+        <i data-lucide="circle-plus" class="icon icon-footer"></i>
+    </div>
+
+   
+
+
+
+
+
 </section>
 
 

@@ -15,6 +15,8 @@
     --c-sec-600: #999999;
     --c-sec-900 : #141414; 
     --c-orange : #FB9004;
+    --c-greybox : #272727;
+    --c-darkfiller : #1a1a1a;
 
     --space-05 : .5em;
     --space-1 : 1em;
@@ -105,11 +107,11 @@ div h1 {
   
   background-color: var(--c-sec-500);
   
-  border-radius: 1em;
+  border-radius: var(--space-1);
 }
 
 .descriptionContainer {
-font-size: .7em;
+  font-size: .7em;
   font-weight: 150;
   color: var(--c-sec-100);
   font-family: 'Alexandria';
@@ -177,31 +179,133 @@ font-size: .7em;
   height: 8em;
   font-family: "scoreboard";
   margin: var(--space-1);
-  background-color: #272727;
-  padding: 1em;
-  justify-content: space-around;
+  background-color: var(--c-greybox);
+  gap: 5%;
+  padding: .6em;
+  border-radius: var(--space-1);
 }
 
 
 .stats-text {
-  font-size: 100%;
-  color: var(--c-orange);
+  color: red;
+  padding: .5em;
+  font-size: 2em;
+}
+
+.hard-text {
+  color: var(--c-sec-100);
+  font-size: 1.2em;
+}
+
+.variable-color {
+  background-color: var(--c-darkfiller);
+  border-radius: var(--space-05);
 }
 
 
+
+.border-container {
+  background-color: #1a1a1a;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--space-05);
+}
 
 .score-container {
-  background-color: #141414;
+  gap: 0.4em;
 }
 
-.score-container p {
-  font-size: 100%;
-  color: var(--c-orange);
+/* timer section */
+
+.timer-box {
+  background-color: var(--c-greybox);
+  height: 6em;
+  margin: var(--space-1);
+  padding: .35em;
+  gap: 2%;
+  border-radius: var(--space-1);
+}
+
+.timer-box button {
+  border-radius: var(--space-05);
+  font-family: 'Alexandria';
+  color: var(--c-sec-100);
+  font-weight: 300;
+}
+
+.first-buttons-box {
+  gap: 5%;
+}
+
+.first-buttons-box, .start-button-box {
+  width: 20%;
+  height: 100%;
+}
+
+.reset-button-box, .stop-button-box, .stopwatch-button-box {
+  height: 100%;
+  flex: 1;
 }
 
 
-.essai-container {
-  background-color: red;
+.first-buttons, .start-button  {
+  width: 100%;
+  height: 100%;
+  border: none;
+  flex: 1;
+}
+
+.stop-button {
+  background-color: #FF4046;
+  height: 100%;
+}
+
+.reset-button {
+background-color: var(--c-darkfiller);
+}
+
+.start-button {
+  background-color: #058601;
+}
+
+.stopwatch-button {
+  background-color: #35517D;
+}
+
+.timer-bar {
+  display: flex;
+  text-align: left;
+  font-family: 'scoreboard';
+  color: red;
+  background-color: var(--c-sec-900);
+  align-items: center;
+  width: 55%;
+  padding-left: 1em;
+  font-size: 1.5em;
+  border-radius: var(--space-05);
+
+}
+
+.reorderable {
+  cursor: grab;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.reorderable.dragging {
+  opacity: 0.85;
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  cursor: grabbing;
+}
+
+
+.footer-container hr {
+  border: var(--c-sec-600) solid .09em;
+}
+
+.icon-footer {
+  size: 5em;
+  color: var(--c-sec-600);
 }
 
 
@@ -209,12 +313,9 @@ font-size: .7em;
 
 
 
-.gap {
-  gap: .4em;
-}
 
 
-.scoreboard-data > .hard-text {
-  color: blueviolet;
 
-}
+
+
+
