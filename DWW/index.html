@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="icon" href="images/icon.png" type="image">
+    <title>Baskemtball</title>
+
+    <!-- ################################   styles  ################################ -->     
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Badeen+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- lucide icons are loaded at the bottom of body tag -->
+
+    
+
+
+
+
+    <!-- ########################   scripts and ressources  ######################## -->
+    <!-- Adafruit IO custom library -->
+    <script src="https://cdn.jsdelivr.net/gh/methio/adafruitIO-class@latest/index.js"></script>
+    <!-- alwan color picker -->
+    <script src="https://cdn.jsdelivr.net/npm/alwan@2/dist/js/alwan.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alwan@2/dist/css/alwan.min.css"/>
+    <!-- get color name from its hex value -->
+     <script src="https://chir.ag/projects/ntc/ntc.js"></script>
+    <!-- script custom -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+<!--
+        <section>
+        <div id="container">
+                <img src="images/default.jpeg" alt="default image of basketball Court">
+            <div>
+                <h1>Ting Kok Village Court</h1>  -->   
+                <!-- description block--> 
+               <!-- <div>-->
+                    <!--date block-->
+                    <!--
+                    <div id="dateBlock">
+                        <i data-lucide="clock-fading"></i>
+                        date text
+                    </div>
+                -->
+                    <!--location block-->
+                    <!--
+                    <div id="mapBlock">
+                        icon
+                        location text
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    -->
+
+        <section class="flex-column">
+            <div class="flex top-container justify-center fixed-position">
+                <h1 class="align-center">TING KOK VILLAGE COURT</h1>
+            </div>
+
+
+            <div class="mapContainer">
+                <iframe class="map" height="100%" width="100%" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29494.987462412897!2d114.21340316619185!3d22.471390045459824!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404091f2b50f735%3A0x8209f74761617822!2sTing%20Kok%2C%20Hong%20Kong!5e0!3m2!1sen!2sfr!4v1761747325472!5m2!1sen!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="descriptionContainer section-margin">
+                <div class="flex justify-between">
+                    <h3>Description</h3>
+                    <i data-lucide="pencil" id="edit-description" class="icon icon-title" height="1em"></i>
+                </div>
+
+                <p id="description-text">
+                    Random descripton of a really cool basketball court I played on during my stay 
+                    in hong kong where I got ot play with a lot of cool locals who 
+                    were very happy to see me play on the court. 
+                    I was probably the first foreigner they'd seen play so well on their court.
+                    Random descripton of a really cool basketball court I played on during my stay 
+                    in hong kong where I got ot play with a lot of cool locals who 
+                    were very happy to see me play on the court. 
+                    I was probably the first foreigner they'd seen play so well on their court.
+                </p>
+
+            </div>
+<div id="reorderable-sections">
+            <div class="mediaContainer h3-spacing section-margin-top-bottom reorderable">
+                <div class="flex justify-between">
+                    <h3>Media</h3>
+                    <i data-lucide="image" class="icon icon-spacing icon-title" height="1em"></i>
+                </div>
+
+                <div class="greyBox">
+                    <div id="mediaIcon">
+                        <i data-lucide="image-plus" class="icon icon-box"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="stats-container h3-spacing section-margin-top-bottom reorderable">
+                <div class="flex justify-between">
+                    <h3>Stats</h3>
+                    <i data-lucide="pyramid" class="icon icon-spacing icon-title" height="1em"></i>
+                </div>
+
+                <div class="greyBox flex-column">
+                    <div id="statsIcon">
+                        <i data-lucide="bluetooth-searching" class="icon icon-box"></i>
+                    </div>
+                    <p>Connect to statsketsker</p>
+                </div>
+            </div>
+
+
+            <div class="playlist-container h3-spacing section-margin-top-bottom reorderable">
+                <div class="flex justify-between">
+                    <h3>Playlist</h3>
+                    <i data-lucide="disc-2" class="icon icon-spacing icon-title" height="1em"></i>
+                </div>
+            <div class="playlist-embed">
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2EyFPHHlNYS6Ulgo4j9SZB?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            </div>
+
+
+        <div class="stats-container-filled h3-spacing section-margin-top-bottom reorderable">
+                <div class="flex justify-between">
+                    <h3>Stats</h3>
+                    <i data-lucide="pyramid" class="icon icon-spacing icon-title" height="1em"></i>
+                </div>
+
+
+
+
+                <!-- blue box -->
+                <div class="stats-box">
+                    <!-- set of numbers in a row-->
+                   <div class="border-container flex align-center align-center justify-center">
+                    <div class="score-container flex flex-column justify-center align-center">
+                                <p class="hard-text">Score</p>
+                            <div class="variable-color">
+                                <p class="stats-text" id="scored">0</p>
+                            </div>
+                    </div>
+                    </div>
+                   <div class="border-container flex justify-center align-center">     
+                        <div class="score-container flex flex-column justify-center align-center">
+                            <p class="hard-text">Shot</p>
+                        <div class="variable-color">
+                            <p class="stats-text" id="shots">0</p>
+                        </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+        
+
+
+        <div class="timer-container-filled h3-spacing section-margin-top-bottom reorderable">
+                <div class="flex justify-between">
+                    <h3>Timer/Stopwatch</h3>
+                    <i data-lucide="timer" class="icon icon-spacing icon-title" height="1em"></i>
+                </div>
+
+
+
+
+                <!-- blue box -->
+                <div class="timer-box flex justify-around">
+                    <div class="flex flex-column justify-center first-buttons-box">
+                        <!-- stopwatch button-->
+                        <div class="stopwatch-button-box">
+                            <!-- reset button-->
+                             <button class="first-buttons stopwatch-button">Stop watch</button>
+                        </div>
+                        <div class="reset-button-box">
+                            <!-- reset button-->
+                             <button class="first-buttons reset-button">Reset</button>
+                        </div>
+                        <div class="stop-button-box">
+                            <!-- stop-->
+                            <button class="first-buttons stop-button">Stop</button>
+                        </div>
+                        <!--reset and stop button in column-->
+                    </div>
+                    <div class="flex align-center start-button-box">
+                        <!-- start cube button-->
+                         <button class="start-button">Start</button>
+                    </div>
+                    <div class="timer-bar">
+                        <!-- timer-->
+                         <p>00:00:00</p>
+                    </div>
+
+
+                </div>
+        </div>
+
+   </div> 
+
+    <div class="footer-container section-margin-top-bottom flex flex-column align-center justify-center">
+        <hr>
+        <i data-lucide="circle-plus" class="icon icon-footer" width="5em"></i>
+        <hr>
+
+    </div>
+
+
+    
+
+</section>
+
+
+
+
+
+
+
+    </main>
+    <footer>
+        <div>
+            <p> © 2025 Eliot Picolet. All rights reserved.</p>
+        </div>
+        <div>
+            <img src="images/tai_po.jpg" id="footer-image">
+        </div>
+
+    </footer>
+
+
+
+
+    
+    <!-- lucide icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+/* reset predefined styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* set variables for colors and spaces */
+:root{
+
+    --c-main : #00A1FF;
+    --c-sec-100 : #FFFFFF;
+    --c-sec-200 : #F9F9F9;
+    --c-sec-500 : #212121;
+    --c-sec-600: #999999;
+    --c-sec-900 : #141414; 
+    --c-orange : #FB9004;
+    --c-greybox : #272727;
+    --c-darkfiller : #1a1a1a;
+
+    --space-05 : .5em;
+    --space-1 : 1em;
+    --space-1-5 : 1.5em;
+    --space-2 : 2em;
+    --space-3 : 3em;
+    --space-4 : 4em;
+
+}
+
+
+@font-face {
+  font-family: scoreboard; /* set name */
+  src: url(CursedTimerUlil-Aznm.ttf); /* url of the font */
+}
+
+/* class utilities for flexbox */
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-column{
+    flex-direction: column;
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+
+body {
+
+
+    /* base font size and family */
+    font-size : 16px;
+    font-family: "Inter", sans-serif;
+
+    /* how to use variables */
+    background-color : var(--c-sec-900);
+}
+
+
+.top-container {
+  background-color: #141414;
+  padding: .5em;
+}
+
+
+
+
+div h1 {
+  font-size:100% ;
+  font-family: 'Alexandria';
+  color: var(--c-sec-100);
+}
+
+.mapContainer {
+  height: 15em;
+}
+
+.map {
+  border-bottom-left-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
+}
+
+.descriptionContainer {
+  margin: var(--space-1);
+  padding: var(--space-1) var(--space-1);
+  
+  background-color: var(--c-sec-500);
+  
+  border-radius: var(--space-1);
+}
+
+.descriptionContainer {
+  font-size: .7em;
+  font-weight: 150;
+  color: var(--c-sec-100);
+  font-family: 'Alexandria';
+  text-align: justify;
+  text-justify: inter-word;
+}
+ h3 {
+  color: var(--c-sec-100);
+  padding-bottom: .6em;
+  font-weight: 400 ;
+  font-size: 1em;
+  font-family: 'Alexandria';
+}
+
+.h3-spacing h3 {
+  padding-left: var(--space-2);
+}
+
+.greyBox {
+  background-color: var(--c-sec-500);
+  height: 8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  color: white;
+}
+
+.section-margin-top-bottom{
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-1-5);
+}
+
+.fixed-position {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100%;
+    top: -1px;
+}
+
+.icon-spacing {
+  margin-right: var(--space-1);
+}
+
+.greyBox p {
+  color: var(--c-sec-600) ;
+}
+
+.icon-box {
+  color: var(--c-sec-600);
+}
+
+
+.playlist-embed {
+  border-radius: var(--space-1);
+  margin: 1em;
+}
+
+.stats-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8em;
+  font-family: "scoreboard";
+  margin: var(--space-1);
+  background-color: var(--c-greybox);
+  gap: 5%;
+  padding: .6em;
+  border-radius: var(--space-1);
+}
+
+
+.stats-text {
+  color: red;
+  padding: .5em;
+  font-size: 2em;
+}
+
+.hard-text {
+  color: var(--c-sec-100);
+  font-size: 1.2em;
+}
+
+.variable-color {
+  background-color: var(--c-sec-900);
+  border-radius: var(--space-05);
+}
+
+
+
+.border-container {
+  background-color: var(--c-darkfiller);
+  width: 100%;
+  height: 100%;
+  border-radius: var(--space-05);
+}
+
+.score-container {
+  gap: 0.4em;
+}
+
+/* timer section */
+
+.timer-box {
+  background-color: var(--c-greybox);
+  height: 6em;
+  margin: var(--space-1);
+  padding: .35em;
+  gap: 2%;
+  border-radius: var(--space-1);
+}
+
+.timer-box button {
+  border-radius: var(--space-05);
+  font-family: 'Alexandria';
+  color: var(--c-sec-100);
+  font-weight: 300;
+}
+
+.first-buttons-box {
+  gap: 5%;
+}
+
+.first-buttons-box, .start-button-box {
+  width: 20%;
+  height: 100%;
+}
+
+.reset-button-box, .stop-button-box, .stopwatch-button-box {
+  height: 100%;
+  flex: 1;
+}
+
+
+.first-buttons, .start-button  {
+  width: 100%;
+  height: 100%;
+  border: none;
+  flex: 1;
+}
+
+.stop-button {
+  background-color: #FF4046;
+  height: 100%;
+}
+
+.reset-button {
+background-color: var(--c-darkfiller);
+}
+
+.start-button {
+  background-color: #058601;
+}
+
+.stopwatch-button {
+  background-color: #35517D;
+  word-wrap: break-word;
+}
+
+.timer-bar {
+  display: flex;
+  text-align: left;
+  font-family: 'scoreboard';
+  color: red;
+  background-color: var(--c-sec-900);
+  align-items: center;
+  width: 55%;
+  padding-left: 2%;
+  font-size: 100%;
+  border-radius: var(--space-05);
+  /* box-shadow: inset 0 0 1em -12px var(--c-sec-100); */
+}
+
+
+.timer-bar p {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+      word-wrap: break-word;
+}
+
+.reorderable {
+  cursor: grab;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.reorderable.dragging {
+  opacity: 0.85;
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  cursor: grabbing;
+}
+
+
+.footer-container {
+  gap: 1em;
+  border-radius: 3em;
+  flex-direction: column-reverse;
+}
+
+.footer-container hr {
+  border: var(--c-sec-600) solid .09em;
+  width: 100%;
+}
+
+.icon-footer {
+  size: 150%;
+  color: var(--c-sec-600);
+}
+
+
+
+footer {
+  margin-top: 5em;
+  background-color: var(--c-greybox);
+  height: auto;
+  font-size: .5em;
+  font-weight: 150;
+  color: var(--c-sec-100);
+  font-family: 'Alexandria';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding: 2%;
+  gap: 1em;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+#footer-image {
+  width: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
